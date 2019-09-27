@@ -30,7 +30,7 @@ html {
 
 .navbar li a:link,
 .navbar li a:visited {
-	padding: 5px 0;
+	padding: 5px 2px;
 	color: #000;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -71,11 +71,11 @@ html {
 }
 .grid-container .image {
 	grid-column: 1 / 6;
-	grid-row: 3 / 4;
+	grid-row: 3 / 6;
 }
 .grid-container .oklubu {
-	grid-column: 5 / 6;
-	grid-row: 3 / 4;
+	grid-column: 7 / 12;
+	grid-row: 3 / 6;
 }
 .grid-container .kontakt {
 	grid-column: 1 / -1;
@@ -83,10 +83,5 @@ html {
 }
 .grid-container .moto {
 	grid-column: 1 / -1;
-	grid-row: 8 / -1;
-}
-
-:root {
-	--bg-color: #3057e1;
-	--text-color: #fefefe;
+	grid-row: 8 / 8;
 }
