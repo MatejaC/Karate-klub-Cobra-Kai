@@ -1,39 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description"
-   content="Karate-klub-Cobra-Kai je klub koji je u svojih pet godina postojanja postigao zavidnu reputaciju.">
- <link href="https://fonts.googleapis.com/css?family=B612+Mono:400,700|Palanquin+Dark:400,500,600,700&display=swap&subset=latin-ext"
-   rel="stylesheet"> -->
- <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
- <link rel="stylesheet" type="text/css" href="vendors/css/animate.css"
- <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
- <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Karate-klub-Cobra-Kai je klub koji je u svojih pet godina postojanja postigao zavidnu reputaciju.">
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono:400,700|Palanquin+Dark:400,500,600,700&display=swap&subset=latin-ext"
+    rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="vendors/css/animate.css"
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 
  <title>Karate-klub-Cobra-Kai</title>
 </head>
+
  <body>
-   <div class="grid-container">
-
-     <div class="grid-item header">Karate klub Cobra Kai</div>
-
-
-     <div class="grid-item navbar">
-      <ul class="navbar">
-       <li><a href="#oklubu">O klubu</a></li>
-       <li><a href="#ucenja">Učenja</a></li>
-       <li><a href="#kakodonas">Kako do nas</a></li>
-       <li><a href="#EN">EN</a></li>
-      </ul>
+  <div id="content">
+    <div class="header">Karate klub Cobra Kai</div>
+    <div id="nav">
+      <div id="links">
+        <a class href="">O klubu</a>
+        <a href="">Učenja</a>
+        <a href="">Kako do nas</a>
+        <a href="">EN</a>
+      </div>
     </div>
-     <div class="grid-item image">imageeeeeeee</div>
-     <div class="grid-item oklubu">oklubu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non facere minima nisi unde culpa suscipit. Tempore eveniet alias explicabo laboriosam?</div>
-     <div class="grid-item kontakt">kontakt Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero autem odio iusto molestias repudiandae rerum?</div>
-     <div class="grid-item moto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aut?</div>
-   </div>
- 
+    <div class="image">imageeeeeeee</div>
+    <div class="oklubu">oklubu Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non facere minima nisi unde culpa
+      suscipit. Tempore eveniet alias explicabo laboriosam? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Delectus, cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quia.</div>
+    <div class="kontakt">kontakt Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero autem odio iusto molestias
+      repudiandae rerum?</div>
+    <div class="moto">MOTOorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aut?</div>
+  </div>
  </body>
-</html>
+ </html>
+
+	<!-- 	#content{
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(8, minmax(150px, auto));
+			grid-gap: 10px;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		#content div{
+			background: #ed3be4;
+			padding: 30px;
+		}
+		#content div:nth-child(even){
+			background: #777;
+			padding: 30px;
+		}
+		.header{
+			/*grid-column-start: 1;
+			grid-column-end: 3;*/
+			grid-column: 1 / 7;
+		}
+		.navbar{
+			grid-column: 2 / 7;
+		}
+		.image{
+			grid-column: 1 / 4;
+			grid-row: 3 / 6;
+		}
+		.oklubu{
+			grid-column: 4 / 7;
+			grid-row: 3 / 6;
+		}
+		.kontakt{
+      grid-column: 1 / 7;
+      grid-row: 6 / 7;
+		}
+		.moto{
+			grid-column: 1 / 7;
+			grid-row: 7 / 8;
+    }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color:#3bbced
+}
+#navbar {
+  display: grid;
+  min-height: 100px;
+  grid-auto-flow: column;
+  bacground-color: rgb(32, 23, 96);
+  grid-gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+	/* word-spacing: 10px;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px; */
+}
+
+#links {
+	display: grid;
+  justify-content:center;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  font-size: 20px;
+}
+
+/* .navbar li a:link,
+.navbar li a:visited {
+	padding: 4px 1px;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 95%;
+	font-weight: 300;
+	border-bottom: 3px solid transparent;
+	transition: border-bottom 0.2s;
+	-webkit-transition: border-bottom 0.2s;
+	-moz-transition: border-bottom 0.2s;
+	-ms-transition: border-bottom 0.2s;
+	-o-transition: border-bottom 0.2s;
+} */
+
+
+
