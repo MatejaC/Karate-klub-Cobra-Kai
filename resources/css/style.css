@@ -25,7 +25,7 @@ body {
 	padding: 0;
 	margin: 0;
 	height: 75%;
-	background-color: #fff;
+	background-color: rgb(241, 237, 237);
 	border: 0.5px solid #fff;
 	color: red;
 }
@@ -34,7 +34,7 @@ body {
 	color: red;
 	font-family: 'Palanquin Dark';
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 32px;
 	margin: 0;
 	padding-top: 2%;
 }
@@ -48,6 +48,7 @@ body {
 	color: #fff;
 	word-spacing: 4px;
 	letter-spacing: 0.5px;
+	overflow: hidden;
 }
 
 #links {
@@ -61,13 +62,17 @@ body {
 }
 
 a {
-	color: #fff;
+	color: #e99a24;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 a:hover {
 	color: #48a8a8;
+}
+
+a:active {
+	color: #0000ff;
 }
 
 .image {
@@ -92,13 +97,22 @@ a:hover {
 .kontakt {
 	grid-column: 1 / 13;
 	height: 80%;
-	text-align: center;
+	justify-self: stretch;
+	margin-top: 4%;
 }
 
 .moto {
 	grid-column: 1 / 13;
 	height: 80%;
+	margin: 0;
 	align-items: center;
+	font-family: 'Palanquin Dark';
+	font-size: 23px;
+	font-weight: 700;
+	color: #ffa318;
+	text-transform: uppercase;
+	grid-auto-flow: column;
+	justify-self: stretch;
 }
 
 #grid {
