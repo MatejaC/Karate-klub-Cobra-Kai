@@ -98,4 +98,15 @@ footer {
 }
 mark {
 	grid-area: moto;
+	height: 80%;
+	margin: 0;
+	align-items: center;
+	font-family: 'Palanquin Dark';
+	font-size: 23px;
+	font-weight: 700;
+	color: #ffa318;
+	text-transform: uppercase;
+	grid-auto-flow: column;
+	align-content: space-evenly;
+	justify-items: stretch;
 }
