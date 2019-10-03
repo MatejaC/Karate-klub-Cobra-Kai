@@ -14,8 +14,8 @@ body {
 	max-width: 1280px;
 	margin: 0 auto;
 	grid-template-areas: "main main . ." "nav nav nav nav" "section1 section1 section2 section2"
-		"section1 section1 section2 section2" ". section3 section3 ." ". section3 section3 ."
-		"contact contact contact contact" "moto moto moto moto";
+		"section1 section1 section2 section2" "section1 section1 section2 section2" ". section3 section3 ."
+		". section3 section3 ." "contact contact contact contact" "moto moto moto moto";
 }
 #content > * {
 	background: #2b3c1a;
@@ -76,9 +76,9 @@ article {
 }
 article p,
 section p,
-aside p,
-footer p {
+aside p {
 	font-size: 18px;
+	padding: 2% 10% 2% 10%;
 }
 section {
 	grid-area: section2;
@@ -96,6 +96,11 @@ footer {
 	border: 0.5px solid #fff;
 	align-content: space-evenly;
 }
+
+footer p {
+	font-size: 18px;
+}
+
 mark {
 	grid-area: moto;
 	height: 80%;
