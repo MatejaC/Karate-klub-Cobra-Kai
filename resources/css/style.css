@@ -112,7 +112,8 @@ a:active {
 	color: #ffa318;
 	text-transform: uppercase;
 	grid-auto-flow: column;
-	justify-self: stretch;
+	align-content: space-evenly;
+	justify-items: stretch;
 }
 
 #grid {

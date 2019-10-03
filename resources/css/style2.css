@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+	color: #fff;
+	font-family: 'Hind', sans-serif;
+	text-align: center;
+}
+#content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 10px;
+	max-width: 1280px;
+	margin: 0 auto;
+	grid-template-areas: "header header header header" "nav nav nav nav" "section1 section1 section2 section2"
+		"section1 section1 section2 section2" ". section3 section3 ." ". section3 section3 ."
+		"contact contact contact contact" "moto moto moto moto";
+}
+#content > * {
+	background: #2b3c1a;
+	padding: 1px;
+}
+header {
+	grid-area: header;
+}
+nav {
+	grid-area: nav;
+}
+main {
+	grid-area: section1;
+}
+section {
+	grid-area: section2;
+}
+aside {
+	grid-area: section3;
+}
+footer {
+	grid-area: contact;
+}
+mark {
+	grid-area: moto;
+}
