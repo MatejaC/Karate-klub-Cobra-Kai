@@ -21,7 +21,7 @@ body {
 
 /*--- HEADER --- */
 .header {
-	grid-column: 2 / 7;
+	grid-column: 1 / 7;
 	padding: 0;
 	margin: 0;
 	height: 75%;
@@ -79,6 +79,7 @@ a:active {
 	grid-column: 1 / 10;
 	grid-row: 3 / 7;
 	padding: 0;
+	border: 0.5px solid #fff;
 }
 .image img {
 	width: 100%;
@@ -97,8 +98,10 @@ a:active {
 .kontakt {
 	grid-column: 1 / 13;
 	height: 80%;
+	margin: 1% 0% 1% 0%;
 	justify-self: stretch;
-	margin-top: 4%;
+	border: 0.5px solid #fff;
+	align-content: space-evenly;
 }
 
 .moto {
