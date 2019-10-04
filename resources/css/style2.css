@@ -101,7 +101,7 @@ aside {
 footer {
 	grid-area: contact;
 	height: 80%;
-	margin: 1% 0% 1% 0%;
+	margin: 1% 0 1% 0;
 	justify-self: stretch;
 	border: 0.5px solid #fff;
 	align-content: space-evenly;
@@ -109,12 +109,13 @@ footer {
 
 footer p {
 	font-size: 18px;
+	padding-top: 1%;
 }
 
 mark {
 	grid-area: moto;
 	height: 80%;
-	margin: 0;
+	margin-bottom: 2%;
 	align-items: center;
 	font-family: 'Palanquin Dark';
 	font-size: 23px;
