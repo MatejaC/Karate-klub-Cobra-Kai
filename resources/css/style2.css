@@ -23,7 +23,7 @@ main {
 	background-color: rgb(241, 237, 237);
 	padding: 0;
 	margin: 0;
-	height: 95%;
+	height: 97%;
 }
 main img {
 	width: 100%;
@@ -33,7 +33,7 @@ main p {
 	color: red;
 	font-family: 'Palanquin Dark';
 	font-weight: 700;
-	font-size: 32px;
+	font-size: 34px;
 	margin: 0;
 	padding-top: 1%;
 	padding-left: 4%;
@@ -124,5 +124,6 @@ mark {
 	grid-auto-flow: column;
 	align-content: space-evenly;
 	justify-items: stretch;
-	background-color: #2b3c1a;
+	background-color: #1f2c13;
+	border: 0.5px solid #fff;
 }
