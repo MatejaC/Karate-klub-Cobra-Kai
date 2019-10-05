@@ -80,7 +80,7 @@ a:active {
 article {
 	grid-area: section1;
 	border: 0.5px solid #fff;
-	background-color: #1c3b4c;
+	background-color: #162e3b;
 }
 article p,
 section p,
@@ -91,12 +91,12 @@ aside p {
 section {
 	grid-area: section2;
 	border: 0.5px solid #fff;
-	background-color: #015f5f;
+	background-color: #015858;
 }
 aside {
 	grid-area: section3;
 	border: 0.5px solid #fff;
-	background-color: #051e3e;
+	background-color: #04172f;
 }
 footer {
 	grid-area: contact;

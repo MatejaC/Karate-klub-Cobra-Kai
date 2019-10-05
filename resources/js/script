@@ -101,17 +101,17 @@ $(document).ready(function() {
 
 	var map = new GMaps({
 		div: '.map',
-		lat: 38.7436057,
-		lng: -9.1,
+		lat: 44.123864,15,
+		lng: 15.24113,15,
 		zoom: 12
 	});
 
 	map.addMarker({
-		lat: 38.7436057,
-		lng: -9.2302434,
-		title: 'Lisbon',
+		lat: 44.123864,15,
+		lng: 15.24113,15,
+		title: 'Zadar',
 		infoWindow: {
-			content: '<p>Our Lisbon HQ</p>'
+			content: '<p>Our club</p>'
 		}
 	});
 });

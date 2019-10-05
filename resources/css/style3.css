@@ -13,9 +13,9 @@ body {
 	grid-gap: 10px;
 	max-width: 1280px;
 	margin: 0 auto;
-	grid-template-areas: "main main . ." "nav nav nav nav" "section1 section1 section2 section2"
-		"section1 section1 section2 section2" "section1 section1 section2 section2" ". section3 section3 ."
-		". section3 section3 ." "contact contact contact contact" "moto moto moto moto";
+	grid-template-areas: "main main . ." "nav nav nav nav" "contact1 contact1 contact1 contact1"
+		"section section section section" "section section section section" "section section section section"
+		"contact contact contact contact" "moto moto moto moto";
 }
 
 main {
@@ -78,25 +78,10 @@ a:active {
 }
 
 article {
-	grid-area: section1;
-	border: 0.5px solid #fff;
-	background-color: #1c3b4c;
-}
-article p,
-section p,
-aside p {
-	font-size: 18px;
-	padding: 2% 15% 2% 15%;
+	grid-area: contact1;
 }
 section {
-	grid-area: section2;
-	border: 0.5px solid #fff;
-	background-color: #015f5f;
-}
-aside {
-	grid-area: section3;
-	border: 0.5px solid #fff;
-	background-color: #051e3e;
+	grid-area: section;
 }
 footer {
 	grid-area: contact;
