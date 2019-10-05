@@ -86,7 +86,7 @@ article p,
 section p,
 aside p {
 	font-size: 18px;
-	padding: 3% 21% 3% 21%;
+	padding: 2% 15% 2% 15%;
 }
 section {
 	grid-area: section2;
