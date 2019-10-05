@@ -13,9 +13,9 @@ body {
 	grid-gap: 10px;
 	max-width: 1280px;
 	margin: 0 auto;
-	grid-template-areas: "main main . ." "nav nav nav nav" "contact1 contact1 contact1 contact1"
-		"section section section section" "section section section section" "section section section section"
-		"contact contact contact contact" "moto moto moto moto";
+	grid-template-areas: "main main . ." "nav nav nav nav" "contact1 contact1 contact2 contact2"
+		"contact1 contact1 contact2 contact2" "section section section section" "section section section section"
+		"section section section section" "contact contact contact contact" "moto moto moto moto";
 }
 
 main {
@@ -80,9 +80,15 @@ a:active {
 article {
 	grid-area: contact1;
 }
+
+aside {
+	grid-area: contact2;
+}
+
 section {
 	grid-area: section;
 }
+
 footer {
 	grid-area: contact;
 	height: 80%;
