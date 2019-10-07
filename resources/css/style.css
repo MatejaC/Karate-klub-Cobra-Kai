@@ -33,20 +33,21 @@ body {
 	width: 100%;
 	max-height: 100%;
 }
-.header p {
+.header h1 {
+	font-weight: 700;
+	font-size: 205%;
 	color: red;
 	font-family: 'Palanquin Dark';
-	font-weight: 700;
-	font-size: 34px;
-	margin: 0;
-	padding-top: 1.5%;
+	padding-top: 1%;
 	padding-left: 5%;
+	padding-bottom: 2%;
+	margin: 0;
 	position: absolute;
 }
-
+/*--- NAVBAR --- */
 .navbar {
-	grid-column: 1 / 13;
 	display: grid;
+	grid-column: 1 / 13;
 	height: 80%;
 	border: 0.5px solid #fff;
 	background-color: #2b3c1a;
@@ -59,7 +60,7 @@ body {
 #links {
 	display: grid;
 	grid-auto-flow: column;
-	font-size: 21px;
+	font-size: 130%;
 	text-align: center;
 	margin-top: 2%;
 	margin-left: 10%;
@@ -69,7 +70,6 @@ body {
 a {
 	color: #e99a24;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
 a:hover {
@@ -100,6 +100,7 @@ a:active {
 
 .oklubu p {
 	padding: 15px 20px 0px 45px;
+	line-height: 1.8;
 }
 
 .kontakt {
