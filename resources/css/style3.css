@@ -20,7 +20,7 @@ body {
 
 /*--- HEADER --- */
 .header {
-	grid-column: 1 / 7;
+	grid-column: 1 / 10;
 	padding: 0;
 	margin: 0;
 	height: 95%;

@@ -13,7 +13,7 @@ body {
 	grid-gap: 10px;
 	max-width: 1280px;
 	margin: 0 auto;
-	grid-template-areas: "main main . ." "nav nav nav nav" "section1 section1 section2 section2"
+	grid-template-areas: "main main main ." "nav nav nav nav" "section1 section1 section2 section2"
 		"section1 section1 section2 section2" "section1 section1 section2 section2" ". section3 section3 ."
 		". section3 section3 ." "contact contact contact contact" "moto moto moto moto";
 }
