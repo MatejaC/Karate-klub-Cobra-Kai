@@ -72,10 +72,10 @@ a {
 }
 
 a:hover {
-	color: #8d8872;
+	color: #897170;
 }
 a:current {
-	color: #788f2c;
+	color: #a12700;
 }
 
 .image {
