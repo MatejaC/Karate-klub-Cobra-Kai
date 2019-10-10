@@ -50,7 +50,6 @@ body {
 	grid-column: 1 / 13;
 	display: grid;
 	height: 80%;
-	border: 0.5px solid #fff;
 	background-color: #f3eed9;
 	color: #fff;
 	word-spacing: 4px;
