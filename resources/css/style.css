@@ -171,9 +171,12 @@ moto p {
 	margin: 0;
 }
 
+input:checked + #content #grid {
+	display: grid;
+}
+
 #grid {
 	position: absolute;
-	top: 0;
 	left: 0;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -183,8 +186,4 @@ moto p {
 	background: transparent;
 	padding: 0;
 	display: none;
-}
-
-input:checked + #content #grid {
-	display: grid;
 }
