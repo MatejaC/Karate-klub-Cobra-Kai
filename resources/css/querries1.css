@@ -1,41 +1,20 @@
-/* Big tablet to 1200px (widths smaller than the 1140px row) */
-@media only screen and (max-width: 1200px) {
-}
-.image {
-	grid-column: 1 / 7;
-	grid-row: 3 / 4;
-}
-.image img {
-	width: 90%;
-	height: 60%;
-}
-
-/* Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1023px) {
+/* Big tablet to ...: from 840px to 1920px */
+@media only screen and (max-width: 1919px) {
 	.image {
 		grid-column: 1 / 13;
 	}
-	.image img {
-		width: 100%;
-		height: 100%;
-		border: 0.5px solid #fff;
-		object-fit: cover;
-	}
-
-	.oklubu {
-		grid-column: 1 / 13;
-		text-align: center;
-	}
 }
 
-/* Small phones to small tablets: from 481px to 767px */
-@media (max-width: 767px) {
+/* Small & large tablets: from 600px to 839px */
+@media (max-width: 839px) {
 	.image {
-		grid-column: 1 / 13;
-		width: 100% !important;
-		margin: 5px 0px 5px 0px;
+		grid-column: 1 / 8;
 	}
 }
-/* Small phones: from 0 to 480px */
+/* Small phones: from 0 to 599px */
 @media only screen and (max-width: 480px) {
+	.image {
+		grid-column: 1 / 4;
+		width: 100%;
+	}
 }
