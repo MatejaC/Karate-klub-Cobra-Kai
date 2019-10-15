@@ -114,7 +114,7 @@ a {
 }
 
 a:hover {
-	color: #006700;
+	color: #364869;
 }
 
 .image {
@@ -123,17 +123,18 @@ a:hover {
 }
 
 .image img {
-	width: 95%;
-	height: 95%;
+	width: 85%;
+	height: 85%;
 	object-fit: cover;
+	margin-right: -5%;
 }
 
 .contact {
-	grid-column: 1 / 4;
-	grid-row: 4 / 8;
+	grid-column: 1 / 5;
+	grid-row: 3 / 8;
 	background-color: #f3eed9;
-	margin-top: -40%;
-	margin-bottom: 15%;
+	margin-bottom: 20%;
+	margin-top: -2%;
 }
 
 .contact p {
@@ -160,7 +161,7 @@ a:hover {
 
 .kontakt p {
 	color: #000;
-	font-size: 24px;
+	font-size: 125%;
 }
 
 .moto {
@@ -169,7 +170,7 @@ a:hover {
 	height: 100%;
 
 	font-family: 'Montserrat', sans-serif;
-	font-size: 28px;
+	font-size: 180%;
 	font-weight: bold;
 	color: #9d2933;
 	text-transform: uppercase;

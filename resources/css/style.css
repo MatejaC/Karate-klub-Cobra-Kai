@@ -76,6 +76,7 @@ body {
 	margin: 0;
 	position: absolute;
 }
+
 /*--- NAVBAR --- */
 .navbar {
 	display: grid;
@@ -106,7 +107,7 @@ a {
 }
 
 a:hover {
-	color: #006700;
+	color: #364869;
 }
 a:current {
 	color: #a12700;
@@ -150,7 +151,7 @@ a:current {
 .kontakt p {
 	color: #000;
 	padding-top: 3%;
-	font-size: 24px;
+	font-size: 125%;
 }
 
 .moto {
@@ -158,7 +159,7 @@ a:current {
 	height: 100%;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 28px;
+	font-size: 180%;
 	font-weight: bold;
 	color: #9d2933;
 	text-transform: uppercase;
