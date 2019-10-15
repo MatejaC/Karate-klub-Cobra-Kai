@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
 html,
 body {
 	background-color: rgba(255, 255, 255, 0.767);
@@ -69,9 +79,6 @@ a {
 
 a:hover {
 	color: #006700;
-}
-a.oklubu {
-	color: #a12700;
 }
 
 .image {
