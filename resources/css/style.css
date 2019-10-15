@@ -15,6 +15,7 @@ html {
 	box-sizing: inherit;
 }
 
+<<<<<<< HEAD
 .twelve-col-grid .grid-item {
 	width: 95%;
 	float: left;
@@ -37,6 +38,8 @@ html {
 	float: left;
 }
 
+=======
+>>>>>>> master
 html,
 body {
 	background-color: rgba(255, 255, 255, 0.767);
