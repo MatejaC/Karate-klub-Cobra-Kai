@@ -1,7 +1,40 @@
 @charset "UTF-8";
+.l-wrap {
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
-* {
+html {
 	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.twelve-col-grid .grid-item {
+	width: 95%;
+	float: left;
+}
+
+.twelwe-col-grid:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+/* --- debug grid --- split gutters with margins to reduce markup for the debug grid --- */
+
+.column {
+	width: calc((100% - 20px * 12) / 12);
+	height: 80px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background: rgba(0, 0, 255, 0.25);
+	float: left;
 }
 
 html,
@@ -17,7 +50,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-auto-rows: minmax(100px, auto);
-	max-width: 1280px;
+	max-width: 1140px;
 	margin: 0 auto;
 	position: relative;
 }
