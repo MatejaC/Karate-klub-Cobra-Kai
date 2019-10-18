@@ -1,42 +1,13 @@
 @charset "UTF-8";
 
-.wrapper {
-	width: 100%;
-	color: rgb(241, 238, 238);
+html,
+body {
+	background-color: rgb(241, 238, 238);
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 18px;
 }
-
-.header {
-	grid-area: header;
-}
-.navbar {
-	grid-area: navbar;
-}
-.image {
-	grid-area: image;
-}
-.oklubu {
-	grid-area: oklubu;
-}
-.kontakt {
-	grid-area: kontakt;
-}
-.moto {
-	grid-area: moto;
-}
-
-.wrapper {
-	display: grid;
-	grid-template-areas: "header" "navbar" "oklubu" "image" "kontakt" "moto";
-}
-@media only screen and (min-width: 400px) {
-	.wrapper {
-		grid-template-columns: 100% auto;
-		grid-template-areas: "header header header header" "navbar navbar navbar navbar" "image image image oklubu"
-			"image image image oklubu" "image image image oklubu" "kontakt kontakt kontakt kontakt"
-			"moto moto moto moto";
-	}
-}
-
 html {
 	box-sizing: border-box;
 }
@@ -47,17 +18,21 @@ html {
 	box-sizing: inherit;
 }
 
-/* --- debug grid --- split gutters with margins to reduce markup for the debug grid --- */
-
-html,
-body {
-	background-color: rgb(241, 238, 238);
-	color: #000;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	font-size: 18px;
+.wrapper {
+	width: 100%;
+	color: rgb(241, 238, 238);
+	display: grid;
+	width: 750px;
+	height: 600px;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 1fr 5fr 5fr 1fr 1fr;
+	display: grid;
+	height: 100em;
+	justify-content: center;
+	align-content: end;
+	grid-auto-rows: auto;
+	grid-gap: 7px;
 }
-
 /*--- HEADER --- */
 .header {
 	padding: 0;
@@ -84,20 +59,16 @@ body {
 	height: 100%;
 	color: rgba(10, 10, 10, 0.932);
 	font-family: 'Montserrat', sans-serif;
-	word-spacing: 4px;
-	letter-spacing: 0.5px;
-	padding-top: 3%;
+	word-spacing: 2px;
+	margin: 4% 4% 2% 2%;
 }
 
 .links {
 	display: grid;
 	grid-auto-flow: column;
-	font-size: 130%;
+	font-size: 92%;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 800;
-	text-align: center;
-	margin-left: 8%;
-	margin-right: 10%;
+	font-weight: 400;
 }
 
 a {
@@ -110,59 +81,231 @@ a:hover {
 }
 
 .image {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
-.image img {
-	margin-left: -30%;
-}
-.oklubu {
-	font-family: 'Montserrat', sans-serif;
-	width: 500px;
-	height: 800px;
+.responsive {
+	max-width: 100%;
+	height: auto;
 }
 
 .oklubu {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
 	background-color: #fff;
+	text-align: center;
+}
+
+.oklubu p {
 	font-family: 'Montserrat', sans-serif;
 	color: #000;
-	text-align: center;
 	font-style: normal;
 	font-weight: 400;
+	padding: 15px 30px 15px 30px;
 	line-height: 1.8;
-	margin-left: -60%;
-	width: 400px;
-	height: 700px;
 }
 
 .kontakt {
-	height: 100%;
-	text-align: center;
-	justify-self: stretch;
 	align-content: space-evenly;
 }
 
 .kontakt p {
 	color: #000;
-	padding-top: 3%;
-	font-size: 125%;
-	text-align: center;
+	margin-right: 3%;
+	margin-left: 3%;
+	font-size: 92%;
 }
 
 .moto {
 	height: 100%;
-	margin: 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 180%;
+	font-size: 150%;
 	font-weight: bold;
 	color: #9d2933;
 	text-transform: uppercase;
 	grid-auto-flow: column;
 	justify-items: stretch;
-
 	margin-bottom: 3%;
 }
 moto p {
 	margin: 0;
-	text-align: center;
 }
+
+/* --- debug grid --- split gutters with margins to reduce markup for the debug grid --- 
+
+ .column {
+	width: calc((100% - 20px * 12) / 12);
+	height: 80px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background: rgb(241, 238, 238);
+	float: left;
+}
+*/
+/* Small phones: from 0 to 599px */
+@media screen and (max-width: 599px) {
+	.wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-rows: 1fr 1fr 4fr 4fr 4fr 1fr 1fr;
+		display: grid;
+		justify-content: center;
+		grid-auto-rows: auto;
+		grid-gap: 4px;
+	}
+
+	.header {
+		grid-column: span 3;
+	}
+	.navbar {
+		grid-column: span 2;
+	}
+	.image {
+		grid-column: span 4;
+	}
+	.oklubu {
+		grid-column: span 4;
+		grid-row: span 5;
+	}
+	.kontakt {
+		grid-column: span 4;
+	}
+	.moto {
+		grid-column: span 4;
+	}
+
+	/*--- HEADER --- */
+	.header {
+		padding: 0;
+		margin: 0;
+		height: auto;
+		width: 90%;
+		justify-content: stretch;
+		object-fit: cover;
+	}
+
+	.header h1 {
+		font-family: 'Acme', sans-serif;
+		font-weight: 700;
+		font-weight: bold;
+		font-size: 220%;
+		color: #9d2933;
+		padding-top: 4%;
+		padding-left: 1%;
+	}
+
+	/*--- NAVBAR --- */
+	.navbar {
+		display: grid;
+		height: auto;
+		width: 80%;
+		color: rgba(10, 10, 10, 0.932);
+		font-family: 'Montserrat', sans-serif;
+		font-size: 93%;
+		word-spacing: 2px;
+		letter-spacing: 0.2px;
+		padding-top: 3%;
+		margin: 0;
+	}
+
+	.links {
+		display: grid;
+		font-size: 100%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+	}
+
+	a {
+		display: grid;
+		color: #574240;
+		text-decoration: none;
+		text-align: center;
+		padding-left: -2%;
+	}
+
+	a:hover {
+		color: #364869;
+	}
+
+	.image {
+		width: 100%;
+		height: auto;
+	}
+	.image img {
+		margin-left: -30%;
+	}
+
+	.oklubu {
+		background-color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		color: #000;
+		text-align: center;
+		font-style: normal;
+		font-weight: 400;
+		width: 400px;
+		height: 660px;
+		margin: 0;
+	}
+
+	.oklubu p {
+		font-family: 'Montserrat', sans-serif;
+		color: #000;
+		font-style: normal;
+		font-weight: 400;
+		padding: 30px 30px 30px 30px;
+		line-height: 1.9;
+		margin: 0;
+	}
+
+	.kontakt {
+		height: 100%;
+		text-align: center;
+		justify-self: stretch;
+		align-content: space-evenly;
+	}
+
+	.kontakt p {
+		color: #000;
+		padding-top: 3%;
+		font-size: 125%;
+		text-align: center;
+	}
+
+	.moto {
+		height: 100%;
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 180%;
+		font-weight: bold;
+		color: #9d2933;
+		text-transform: uppercase;
+		grid-auto-flow: column;
+		justify-items: stretch;
+
+		margin-bottom: 3%;
+	}
+	moto p {
+		margin: 0;
+		text-align: center;
+	}
+}
+
+/* Big tablet to ...: from 840px to 1920px 
+@media only screen and (max-width: 1919px) {
+	.image {
+		grid-column: 1 / 13;
+	}
+}*/
+
+/* Small & large tablets: from 600px to 839px 
+@media (max-width: 839px) {
+	.image {
+		grid-column: 1 / 8;
+	}
+}*/
+/* Small phones: from 0 to 599px 
+@media only screen and (max-width: 480px) {
+	.image {
+		grid-column: 1 / 4;
+		width: 100%;
+	}
+}*/
