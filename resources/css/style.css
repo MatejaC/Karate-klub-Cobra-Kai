@@ -148,42 +148,49 @@ a:current {
 	align-content: space-evenly;
 }
 
-.kontakt p {
-	color: #000;
-	padding-top: 3%;
-	font-size: 125%;
+	.kontakt p {
+		color: #000;
+		padding-top: 3%;
+		font-size: 125%;
+		text-align: center;
+	}
+
+	.moto {
+		height: 100%;
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 180%;
+		font-weight: bold;
+		color: #9d2933;
+		text-transform: uppercase;
+		grid-auto-flow: column;
+		justify-items: stretch;
+
+		margin-bottom: 3%;
+	}
+	moto p {
+		margin: 0;
+		text-align: center;
+	}
 }
 
-.moto {
-	grid-column: 1 / 13;
-	height: 100%;
-	margin: 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 180%;
-	font-weight: bold;
-	color: #9d2933;
-	text-transform: uppercase;
-	grid-auto-flow: column;
-	justify-items: stretch;
-	margin-bottom: 3%;
-}
-moto p {
-	margin: 0;
-}
+/* Big tablet to ...: from 840px to 1920px 
+@media only screen and (max-width: 1919px) {
+	.image {
+		grid-column: 1 / 13;
+	}
+}*/
 
-input:checked + #content #grid {
-	display: grid;
-}
-
-#grid {
-	position: absolute;
-	left: 0;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-auto-rows: minmax(100%, auto);
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	padding: 0;
-	display: none;
-}
+/* Small & large tablets: from 600px to 839px 
+@media (max-width: 839px) {
+	.image {
+		grid-column: 1 / 8;
+	}
+}*/
+/* Small phones: from 0 to 599px 
+@media only screen and (max-width: 480px) {
+	.image {
+		grid-column: 1 / 4;
+		width: 100%;
+	}
+}*/
