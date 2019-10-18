@@ -96,7 +96,7 @@ body {
 	padding-top: 3%;
 }
 
-#links {
+.links {
 	display: grid;
 	grid-auto-flow: column;
 	font-size: 130%;

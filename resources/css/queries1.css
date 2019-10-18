@@ -1,0 +1,233 @@
+/* Big tablet to ...: from 840px to 1920px 
+@media only screen and (max-width: 1919px) {
+	.image {
+		grid-column: 1 / 13;
+	}
+}*/
+
+/* Small & large tablets: from 600px to 839px 
+@media (max-width: 839px) {
+	.image {
+		grid-column: 1 / 8;
+	}
+}*/
+/* Small phones: from 0 to 599px 
+@media only screen and (max-width: 480px) {
+	.image {
+		grid-column: 1 / 4;
+		width: 100%;
+	}
+}*/
+
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 100%;
+	color: rgb(241, 238, 238);
+}
+
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/*.twelve-col-grid .grid-item {
+	width: 95%;
+	float: left;
+} 
+.twelwe-col-grid:after {
+	display: table;
+	clear: both;
+	content: '';
+}*/
+
+/* --- debug grid --- split gutters with margins to reduce markup for the debug grid --- */
+
+/* .column {
+	width: calc((100% - 20px * 12) / 12);
+	height: 80px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background: rgb(241, 238, 238);
+	float: left;
+} */
+
+html,
+body {
+	background-color: rgb(241, 238, 238);
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 18px;
+}
+
+/* #content {
+	display: grid;
+	/* grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100px, auto); */
+/* max-width: 1140px;
+	margin: 0 auto;
+	position: relative;
+} */
+
+/*--- HEADER --- */
+.header {
+	/* grid-column: 1 / 13; */
+	margin: 3%;
+	height: 100%;
+	justify-content: stretch;
+	object-fit: cover;
+}
+
+.header h1 {
+	font-family: 'Acme', sans-serif;
+	font-weight: 400;
+	font-weight: bold;
+	font-size: 220%;
+	color: #9d2933;
+}
+
+/*--- NAVBAR --- */
+.navbar {
+	display: grid;
+	/* grid-column: 1 / 13;
+	grid-row: 2 / 3;*/
+	height: 100%;
+	color: rgba(10, 10, 10, 0.932);
+	font-family: 'Montserrat', sans-serif;
+	word-spacing: 2px;
+	margin: 4% 4% 2% 2%;
+}
+
+.links {
+	display: grid;
+	grid-auto-flow: column;
+	font-size: 92%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	padding-bottom: 2%;
+}
+
+a {
+	color: #574240;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #364869;
+}
+
+.image {
+	max-width: 100%;
+	height: auto;
+}
+.responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.oklubu {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	background-color: #fff;
+	text-align: center;
+}
+
+.oklubu p {
+	font-family: 'Montserrat', sans-serif;
+	color: #000;
+	font-style: normal;
+	font-weight: 400;
+	padding: 15px 30px 15px 30px;
+	line-height: 1.8;
+}
+
+.kontakt {
+	/* grid-column: 1 / 13;*/
+
+	align-content: space-evenly;
+}
+
+.kontakt p {
+	color: #000;
+	margin-right: 3%;
+	margin-left: 3%;
+	font-size: 92%;
+}
+
+.moto {
+	/* grid-column: 1 / 13; */
+	height: 100%;
+
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	color: #9d2933;
+	text-transform: uppercase;
+	grid-auto-flow: column;
+	justify-items: stretch;
+	margin-bottom: 3%;
+}
+moto p {
+	margin: 0;
+}
+
+input:checked + #content #grid {
+	display: grid;
+}
+
+#grid {
+	position: absolute;
+	left: 0;
+	display: grid;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	padding: 0;
+	display: none;
+}
+*/ .header {
+	grid-area: header;
+}
+.navbar {
+	grid-area: navbar;
+}
+.image {
+	grid-area: image;
+}
+.oklubu {
+	grid-area: oklubu;
+}
+.kontakt {
+	grid-area: kontakt;
+}
+.moto {
+	grid-area: moto;
+}
+
+wrapper {
+	display: grid;
+	grid-template-areas: "header" "navbar" "oklubu" "image" "kontakt" "moto";
+}
+@media only screen and (min-width: 400px) {
+	.wrapper {
+		grid-template-columns: 20% auto;
+		grid-template-areas: "header header" "navbar navbar" "navbar navbar" "oklubu oklubu" "image image"
+			"kontakt kontakt" "moto moto";
+	}
+}

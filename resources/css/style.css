@@ -1,9 +1,40 @@
 @charset "UTF-8";
 
-.l-wrap {
-	max-width: 1140px;
-	margin-right: auto;
-	margin-left: auto;
+.wrapper {
+	width: 100%;
+	color: rgb(241, 238, 238);
+}
+
+.header {
+	grid-area: header;
+}
+.navbar {
+	grid-area: navbar;
+}
+.image {
+	grid-area: image;
+}
+.oklubu {
+	grid-area: oklubu;
+}
+.kontakt {
+	grid-area: kontakt;
+}
+.moto {
+	grid-area: moto;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-areas: "header" "navbar" "oklubu" "image" "kontakt" "moto";
+}
+@media only screen and (min-width: 400px) {
+	.wrapper {
+		grid-template-columns: 100% auto;
+		grid-template-areas: "header header header header" "navbar navbar navbar navbar" "image image image oklubu"
+			"image image image oklubu" "image image image oklubu" "kontakt kontakt kontakt kontakt"
+			"moto moto moto moto";
+	}
 }
 
 html {
@@ -16,27 +47,7 @@ html {
 	box-sizing: inherit;
 }
 
-.twelve-col-grid .grid-item {
-	width: 95%;
-	float: left;
-}
-
-.twelwe-col-grid:after {
-	display: table;
-	clear: both;
-	content: '';
-}
-
 /* --- debug grid --- split gutters with margins to reduce markup for the debug grid --- */
-
-.column {
-	width: calc((100% - 20px * 12) / 12);
-	height: 80px;
-	margin-right: 10px;
-	margin-left: 10px;
-	background: rgb(241, 238, 238);
-	float: left;
-}
 
 html,
 body {
@@ -47,18 +58,8 @@ body {
 	font-size: 18px;
 }
 
-#content {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-auto-rows: minmax(100px, auto);
-	max-width: 1140px;
-	margin: 0 auto;
-	position: relative;
-}
-
 /*--- HEADER --- */
 .header {
-	grid-column: 1 / 13;
 	padding: 0;
 	margin: 0;
 	height: 100%;
@@ -68,7 +69,7 @@ body {
 
 .header h1 {
 	font-family: 'Acme', sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	font-weight: bold;
 	font-size: 300%;
 	color: #9d2933;
@@ -80,8 +81,6 @@ body {
 /*--- NAVBAR --- */
 .navbar {
 	display: grid;
-	grid-column: 1 / 13;
-	grid-row: 2 / 3;
 	height: 100%;
 	color: rgba(10, 10, 10, 0.932);
 	font-family: 'Montserrat', sans-serif;
@@ -90,7 +89,7 @@ body {
 	padding-top: 3%;
 }
 
-#links {
+.links {
 	display: grid;
 	grid-auto-flow: column;
 	font-size: 130%;
@@ -109,41 +108,36 @@ a {
 a:hover {
 	color: #364869;
 }
-a:current {
-	color: #a12700;
-}
 
 .image {
-	grid-column: 1 / 12;
-	grid-row: 3 / 8;
+	width: 100%;
+	height: auto;
 }
 .image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	margin-left: -30%;
+}
+.oklubu {
+	font-family: 'Montserrat', sans-serif;
+	width: 500px;
+	height: 800px;
 }
 
 .oklubu {
-	grid-column: 9 / 13;
-	grid-row: 4 / 7;
-	font-family: 'Montserrat', sans-serif;
-	font-display: swap;
 	background-color: #fff;
-	text-align: right;
-}
-
-.oklubu p {
 	font-family: 'Montserrat', sans-serif;
 	color: #000;
+	text-align: center;
 	font-style: normal;
-	font-weight: 700;
-	padding: 15px 40px 15px 48px;
+	font-weight: 400;
 	line-height: 1.8;
+	margin-left: -60%;
+	width: 400px;
+	height: 700px;
 }
 
 .kontakt {
-	grid-column: 1 / 13;
 	height: 100%;
+	text-align: center;
 	justify-self: stretch;
 	align-content: space-evenly;
 }
@@ -152,10 +146,10 @@ a:current {
 	color: #000;
 	padding-top: 3%;
 	font-size: 125%;
+	text-align: center;
 }
 
 .moto {
-	grid-column: 1 / 13;
 	height: 100%;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
@@ -165,25 +159,10 @@ a:current {
 	text-transform: uppercase;
 	grid-auto-flow: column;
 	justify-items: stretch;
+
 	margin-bottom: 3%;
 }
 moto p {
 	margin: 0;
-}
-
-input:checked + #content #grid {
-	display: grid;
-}
-
-#grid {
-	position: absolute;
-	left: 0;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-auto-rows: minmax(100%, auto);
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	padding: 0;
-	display: none;
+	text-align: center;
 }
